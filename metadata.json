@@ -1,0 +1,6 @@
+{
+  "name": "ImpulseShell",
+  "description": "Interactive Hyprland desktop environment and Material 3 Rust Wayland shell customizer modeled after end-4 illogical-impulse and Caelestia Shell.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
