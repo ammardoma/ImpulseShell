@@ -1,0 +1,68 @@
+/* ~/.config/waybar/style.css — ImpulseShell (Material 3 Bar) */
+* {
+  font-family: "JetBrainsMono Nerd Font", "Inter", sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  border: none;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(30, 36, 35, 0.81);
+  color: #e6eaea;
+  border-radius: 16px;
+  border: 1px solid rgba(57, 70, 69, 0.45);
+}
+
+.modules-left, .modules-center, .modules-right {
+  padding: 2px 8px;
+}
+
+#custom-mixie-launcher,
+#custom-launcher {
+  color: #b8d5d3;
+  font-size: 15px;
+  padding: 0 10px 0 4px;
+}
+
+#workspaces button {
+  color: #b3c1c0;
+  padding: 2px 8px;
+  margin: 2px 2px;
+  border-radius: 999px;
+  transition: all 160ms ease;
+}
+
+#workspaces button.active {
+  background: #b8d5d3;
+  color: #1d3e3c;
+}
+
+#workspaces button:hover {
+  background: #282f2e;
+  color: #e6eaea;
+}
+
+#clock,
+#mpris,
+#pulseaudio,
+#network,
+#battery,
+#cpu,
+#memory,
+#custom-control-center {
+  padding: 3px 10px;
+  margin: 2px 2px;
+  border-radius: 999px;
+  background: rgba(40, 47, 46, 0.65);
+  color: #e6eaea;
+}
+
+#mpris {
+  color: #b8d5d3;
+}
+
+#custom-control-center {
+  background: #3d5c59;
+  color: #e0ebea;
+}

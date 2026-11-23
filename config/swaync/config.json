@@ -1,0 +1,53 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "cssPriority": "user",
+  "control-center-margin-top": 0,
+  "control-center-margin-bottom": 0,
+  "control-center-margin-right": 0,
+  "control-center-margin-left": 0,
+  "control-center-width": 372,
+  "notification-window-width": 360,
+  "widgets": [
+    "title",
+    "buttons-grid",
+    "volume",
+    "backlight",
+    "mpris",
+    "dnd",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "ImpulseShell Control Center",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "volume": {
+      "label": "󰕾"
+    },
+    "backlight": {
+      "label": "󰃠"
+    },
+    "mpris": {
+      "image-size": 56,
+      "image-radius": 12
+    },
+    "buttons-grid": {
+      "actions": [
+        { "label": "󰤨 Wi-Fi", "command": "nm-connection-editor" },
+        { "label": "󰂯 BT", "command": "blueman-manager" },
+        { "label": "󰖔 Sunset", "command": "impulse-sunset" },
+        { "label": "󰈊 Picker", "command": "impulse-picker" },
+        { "label": "󰄀 Snip", "command": "impulse-screenshot region" },
+        { "label": "󰌾 Lock", "command": "hyprlock" }
+      ]
+    }
+  }
+}

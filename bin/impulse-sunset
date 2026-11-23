@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+TEMP="${1:-4200}"
+if pgrep -x hyprsunset >/dev/null 2>&1; then
+  pkill -x hyprsunset
+  command -v notify-send >/dev/null 2>&1 && notify-send "ImpulseShell Night Light" "Disabled"
+else
+  nohup hyprsunset -t "$TEMP" >/dev/null 2>&1 &
+  command -v notify-send >/dev/null 2>&1 && notify-send "ImpulseShell Night Light" "Enabled (${TEMP}K)"
+fi

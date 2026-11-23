@@ -999,7 +999,7 @@ if [ ! -f "config/hypr/hyprland.conf" ]; then
   fi
   if [ -d "$INSTALL_DIR/.git" ]; then
     echo "[1/5] Updating ImpulseShell in $INSTALL_DIR..."
-    git -C "$INSTALL_DIR" pull --ff-only
+    git -C "$INSTALL_DIR" fetch --depth=1 origin main && git -C "$INSTALL_DIR" reset --hard origin/main
   else
     echo "[1/5] Cloning ImpulseShell from $REPO_URL..."
     git clone --depth=1 "$REPO_URL" "$INSTALL_DIR"

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+mkdir -p "$HOME/Pictures/Screenshots"
+OUT="$HOME/Pictures/Screenshots/impulse-$(date +%Y%m%d-%H%M%S).png"
+MODE="${1:-region}"
+
+if [ "$MODE" = "full" ]; then
+  grim "$OUT"
+else
+  GEOM="$(slurp)" || exit 0
+  grim -g "$GEOM" "$OUT"
+fi
+
+if command -v wl-copy >/dev/null 2>&1; then
+  wl-copy < "$OUT"
+fi
+command -v notify-send >/dev/null 2>&1 && notify-send "ImpulseShell Screenshot" "Saved & copied: $OUT"

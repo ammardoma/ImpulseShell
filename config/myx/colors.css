@@ -1,0 +1,15 @@
+/* ~/.config/myx/colors.css — Material 3 & Glass Tokens */
+:root {
+  --m3-primary: #b8d5d3;
+  --m3-on-primary: #1d3e3c;
+  --m3-primary-container: #3d5c59;
+  --m3-on-primary-container: #e0ebea;
+  --m3-secondary: #b9c8ca;
+  --m3-tertiary: #bcbdd2;
+  --m3-surface: #101313;
+  --m3-surface-container: #1e2423;
+  --m3-surface-container-high: #282f2e;
+  --m3-on-surface: #e6eaea;
+  --m3-on-surface-variant: #b3c1c0;
+  --m3-outline-variant: #394645;
+}

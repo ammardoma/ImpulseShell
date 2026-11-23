@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Launches the real ImpulseShell Linux Wayland Desktop Environment
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=Hyprland
+export PATH="$HOME/.local/bin:$PATH"
+
+if command -v Hyprland >/dev/null 2>&1; then
+  exec Hyprland
+elif command -v start-hyprland >/dev/null 2>&1; then
+  exec start-hyprland
+elif command -v niri-session >/dev/null 2>&1; then
+  exec niri-session
+else
+  echo "Error: Neither Hyprland nor niri is installed." >&2
+  exit 1
+fi

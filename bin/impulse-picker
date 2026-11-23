@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+HEX="$(hyprpicker -a 2>/dev/null || true)"
+if [ -n "$HEX" ]; then
+  command -v notify-send >/dev/null 2>&1 && notify-send "ImpulseShell Color Picker" "Copied $HEX to clipboard"
+fi

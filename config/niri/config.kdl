@@ -1,0 +1,61 @@
+// ~/.config/niri/config.kdl — Optional Niri Infinite-Scrolling Session for ImpulseShell
+// Launch via: niri-session (if you installed niri alongside Hyprland)
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+    }
+    touchpad {
+        tap
+        natural-scroll
+    }
+    // focus-follows-mouse
+}
+
+layout {
+    gaps 6
+    center-focused-column "on-overflow"
+    default-column-width { proportion 0.66; }
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 0.85
+    }
+    focus-ring {
+        width 2
+        active-color "#b8d5d3"
+        inactive-color "#394645"
+    }
+}
+
+window-rule {
+    geometry-corner-radius 16
+    clip-to-geometry true
+}
+
+spawn-at-startup "waybar"
+spawn-at-startup "swaync"
+spawn-at-startup "swww-daemon"
+
+
+binds {
+    Alt+Space { spawn "fuzzel"; }
+    Mod+Return { spawn "kitty"; }
+    Mod+N { spawn "swaync-client" "-t" "-sw"; }
+    Mod+Q { close-window; }
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+R { switch-preset-column-width; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+Shift+E { quit; }
+}

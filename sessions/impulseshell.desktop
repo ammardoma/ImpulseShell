@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=ImpulseShell
+Comment=ImpulseShell Wayland Desktop Environment (Hyprland + Mixie/M3 Shell)
+Exec=/usr/local/bin/impulse-session
+Type=Application
+DesktopNames=Hyprland
