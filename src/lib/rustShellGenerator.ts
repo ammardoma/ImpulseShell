@@ -41,7 +41,7 @@ members = [
 
 [workspace.package]
 version = "0.3.0"
-edition = "2024"
+edition = "2021"
 license = "GPL-3.0-or-later"
 
 [workspace.dependencies]
@@ -55,7 +55,7 @@ tokio = { version = "1.43", features = ["rt", "net", "sync", "time", "macros"] }
 gtk4 = { version = "0.9", features = ["v4_16"] }
 gtk4-layer-shell = "0.4"
 material-colors = "0.4"
-mlua = { version = "0.10", features = ["luajit", "serialize"], optional = true }
+mlua = { version = "0.10", features = ["luajit", "serialize"] }
 serde = { version = "1.0", features = ["derive"] }
 toml = "0.8"
 
@@ -661,7 +661,7 @@ async fn main() {
   const compositorCargoToml = `[package]
 name = "nyx-compositor"
 version = "0.4.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
 calloop = { workspace = true }
@@ -673,7 +673,7 @@ smithay = { workspace = true }
   const ipcCargoToml = `[package]
 name = "nyx-ipc"
 version = "0.4.0"
-edition = "2024"
+edition = "2021"
 
 [[bin]]
 name = "nyx-ctl"
@@ -686,13 +686,13 @@ calloop = { workspace = true }
   const configCargoToml = `[package]
 name = "nyx-config"
 version = "0.4.0"
-edition = "2024"
+edition = "2021"
 `;
 
   const daemonCargoToml = `[package]
 name = "myx-daemon"
 version = "0.4.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
 tokio = { workspace = true }
@@ -731,9 +731,9 @@ fn main() {
 set -euo pipefail
 
 # Works both locally inside a cloned folder AND directly via:
-#   curl -fsSL https://raw.githubusercontent.com/<USER>/<REPO>/main/install.sh | bash
-REPO_URL="\${NYX_REPO_URL:-https://github.com/<USER>/<REPO>.git}"
-INSTALL_DIR="\${NYX_INSTALL_DIR:-$HOME/.local/share/nyx-myx}"
+#   curl -fsSL https://raw.githubusercontent.com/ammardoma/ImpulseShell/main/install.sh | bash
+REPO_URL="\${NYX_REPO_URL:-https://github.com/ammardoma/ImpulseShell.git}"
+INSTALL_DIR="\${NYX_INSTALL_DIR:-$HOME/.local/share/ImpulseShell}"
 
 if [ ! -f "Cargo.toml" ] || [ ! -d "crates/nyx-compositor" ]; then
   if ! command -v git >/dev/null 2>&1; then
