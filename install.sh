@@ -16,7 +16,7 @@ else
 fi
 
 cd "$INSTALL_DIR"
-npm install
+npm install --legacy-peer-deps
 npm run build
 echo "Installed ImpulseShell! Starting on http://localhost:3000 ..."
 npm run dev
